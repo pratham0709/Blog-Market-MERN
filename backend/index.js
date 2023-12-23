@@ -17,7 +17,7 @@ const { throws } = require("assert");
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URL);
-    console.log("database is connected successfully!");
+    console.log("database is connected successfully! 🌠🌠🌠1️⃣1️⃣");
   } catch (err) {
     console.log(err);
   }

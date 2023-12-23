@@ -1,2 +1,2 @@
-export const URL = "http://localhost:8080";
+export const URL = "https://blog-ska7.onrender.com";
 export const IF = import.meta.env.VITE_IF;
