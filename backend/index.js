@@ -29,7 +29,11 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://blog-ska7.onrender.com"],
+    origin: [
+      "http://localhost:5173",
+      "https://blog-market-mern.vercel.app/",
+      "https://blog-market-mern-k43q15e3u-pratham0709.vercel.app",
+    ],
     credentials: true,
   })
 );
