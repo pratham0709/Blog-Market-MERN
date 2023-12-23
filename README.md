@@ -20,9 +20,9 @@ A virtual blog application using the MERN stack (MongoDB, Express js, React js, 
 
 ![Image description](https://github.com/pratham0709/Blog-Market-MERN/blob/main/ScreenShot/Screenshot%202023-12-23%20220156.png)
 
-This application is deployed on Heroku and can be accessed through the following link:
+This application is deployed on Vercel and can be accessed through the following link:
 
-[MERN Blog on Heroku](https://mern-blog-01.herokuapp.com/)
+[MERN Blog on Vercel](https://blog-market-mern.vercel.app/)
 
 ## Technology
 
