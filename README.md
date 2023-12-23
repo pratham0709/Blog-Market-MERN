@@ -1,8 +1,10 @@
-#API Envirnment : 
-CLOUDINARY_URL=cloudinary://336774723899658:DM_b7aysW_kACTXHWN8b6LCN_X4@dseehwbwx
+MONGO_URL=mongodb+srv:/{userName}:{password}@cluster0.mjwceow.mongodb.net/?retryWrites=true&w=majority
 
-#API Key : 
-336774723899658
+SECRET=kk124
+PORT=8080
 
-#API Secret : 
-DM_b7aysW_kACTXHWN8b6LCN_X4
+ClOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+for render envi variables 👆🏻
