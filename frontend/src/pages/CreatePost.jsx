@@ -51,7 +51,7 @@ const CreatePost = () => {
 
       // img upload
       try {
-        const imgUpload = await axios.post(URL + "/api/upload", data);
+        const imgUpload = await axios.post("https://blog-ska7.onrender.com/api/upload", data);
         // Set post.photo to the URL of the uploaded image
         post.photo = imgUpload.data.imageUrl;
         console.log("uploded image data  :", imgUpload.data);
@@ -63,7 +63,7 @@ const CreatePost = () => {
 
     // post upload
     try {
-      const res = await axios.post(URL + "/api/posts/create", post, {
+      const res = await axios.post("https://blog-ska7.onrender.com/api/posts/create", post, {
         withCredentials: true,
       });
       navigate("/posts/post/" + res.data._id);

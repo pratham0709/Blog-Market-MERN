@@ -21,7 +21,7 @@ const Profile = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get(URL + "/api/users/" + user._id)
+      const res = await axios.get("https://blog-ska7.onrender.com/api/users/" + user._id)
       setUsername(res.data.username)
       setEmail(res.data.email)
       setPassword(res.data.password)
@@ -48,7 +48,7 @@ const Profile = () => {
 
   const handleUserDelete = async () => {
     try {
-      const res = await axios.delete(URL + "/api/users/" + user._id, { withCredentials: true })
+      const res = await axios.delete("https://blog-ska7.onrender.com/api/users/" + user._id, { withCredentials: true })
       setUser(null)
       navigate("/")
       // console.log(res.data)
@@ -61,7 +61,7 @@ const Profile = () => {
   // console.log(user)
   const fetchUserPosts = async () => {
     try {
-      const res = await axios.get(URL + "/api/posts/user/" + user._id)
+      const res = await axios.get("https://blog-ska7.onrender.com/api/posts/user/" + user._id)
       // console.log(res.data)
       setPosts(res.data)
 

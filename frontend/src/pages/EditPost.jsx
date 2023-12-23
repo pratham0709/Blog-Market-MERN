@@ -21,7 +21,7 @@ const EditPost = () => {
 
   const fetchPost = async () => {
     try {
-      const res = await axios.get(URL + "/api/posts/" + postId)
+      const res = await axios.get("https://blog-ska7.onrender.com/api/posts/" + postId)
       setTitle(res.data.title)
       setDesc(res.data.desc)
       setFile(res.data.photo)
@@ -51,7 +51,7 @@ const EditPost = () => {
 
       // img upload
       try {
-        const imgUpload = await axios.post(URL + "/api/upload", data);
+        const imgUpload = await axios.post("https://blog-ska7.onrender.com/api/upload", data);
         // Set post.photo to the URL of the uploaded image
         post.photo = imgUpload.data.imageUrl;
         console.log("uploded image data  :", imgUpload.data);
@@ -62,7 +62,7 @@ const EditPost = () => {
     }
 
     try {
-      const res = await axios.put(URL + "/api/posts/" + postId, post, { withCredentials: true })
+      const res = await axios.put("https://blog-ska7.onrender.com/api/posts/" + postId, post, { withCredentials: true })
       navigate("/posts/post/" + res.data._id)
       // console.log(res.data)
 
