@@ -29,7 +29,11 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "*",
+      "https://blog-market-mern.vercel.app",
+      "https://blog-market-mern.vercel.app",
+    ],
     credentials: true,
   })
 );
