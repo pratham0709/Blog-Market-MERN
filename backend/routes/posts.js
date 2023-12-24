@@ -10,14 +10,9 @@ const verifyToken = require("../verifyToken");
 router.post("/create", verifyToken, async (req, res) => {
   try {
     const newPost = new Post(req.body);
-    console.log(req.body);
-    console.log("poste is creating ...");
+    // console.log(req.body)
     const savedPost = await newPost.save();
-    if (savedPost) {
-      console.log(" posted is created ...");
-    } else {
-      console.log(" poste is not created Faild...");
-    }
+
     res.status(200).json(savedPost);
   } catch (err) {
     res.status(500).json(err);
@@ -33,7 +28,6 @@ router.put("/:id", verifyToken, async (req, res) => {
       { new: true }
     );
     res.status(200).json(updatedPost);
-    console.log("updating poste ..");
   } catch (err) {
     res.status(500).json(err);
   }
@@ -44,7 +38,6 @@ router.delete("/:id", verifyToken, async (req, res) => {
   try {
     await Post.findByIdAndDelete(req.params.id);
     await Comment.deleteMany({ postId: req.params.id });
-    console.log("post is delete...");
     res.status(200).json("Post has been deleted!");
   } catch (err) {
     res.status(500).json(err);
@@ -80,7 +73,6 @@ router.get("/", async (req, res) => {
 router.get("/user/:userId", async (req, res) => {
   try {
     const posts = await Post.find({ userId: req.params.userId });
-    console.log("getting user Posts..");
     res.status(200).json(posts);
   } catch (err) {
     res.status(500).json(err);
